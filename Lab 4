@@ -1,1 +1,64 @@
-Lab 4 Code:
+import rasterio
+from matplotlib import pyplot
+
+
+# In[2]:
+
+
+#Ignore the "Not georeferenced warning"
+#Make sure the path is set up properly so that the files can be accessed. I left my path in as an example.
+
+dataset = rasterio.open(r"C:\Users\tropi\OneDrive\Documents\UTK Stuff\Classes\DATA 201\Coding for DATA 201\lab4_files\lab4_files\knoxville.JPG")
+
+
+# In[3]:
+
+
+#Reading Raster Data
+
+band1 = dataset.read(1)
+band2 = dataset.read(2)
+band3 = dataset.read(3)
+
+
+# In[10]:
+
+
+pyplot.imshow(band1)
+
+
+# In[11]:
+
+
+pyplot.imshow(band2)
+
+
+# In[12]:
+
+
+pyplot.imshow(band3)
+
+
+# In[ ]:
+
+
+#What do you notice with each of the above bands? What is happening as the different ones are plotted? 
+#Answer this on your answer sheet. 
+
+
+# In[15]:
+
+
+#While the above are not necessary errors 
+#what would you want to keep in mind when using these different bands in an analysis?
+#Answer this on your answer sheet. 
+
+band1
+
+
+# In[ ]:
+
+
+
+
+
